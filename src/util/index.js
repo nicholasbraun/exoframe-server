@@ -29,7 +29,7 @@ exports.getProjectConfig = () => {
   return config;
 };
 
-exports.tagFromConfig = ({username, config}) => `exo-${_.kebabCase(username)}-${_.kebabCase(config.name)}:latest`;
+exports.tagFromConfig = ({username, config}) => `${_.kebabCase(username)}-${_.kebabCase(config.name)}:latest`;
 
 exports.baseNameFromImage = image =>
   image

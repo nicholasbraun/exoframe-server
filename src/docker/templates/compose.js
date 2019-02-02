@@ -14,7 +14,7 @@ const defaultProjectPrefix = 'exo';
 
 // generates new base name for deployment
 const generateBaseName = ({username, config}) =>
-  `exo-${_.kebabCase(username)}-${_.kebabCase(config.name.split(':').shift())}`;
+  `${_.kebabCase(username)}-${_.kebabCase(config.name.split(':').shift())}`;
 
 // function to update compose file with required vars
 const updateCompose = ({username, baseName, serverConfig, composePath, util, resultStream}) => {
